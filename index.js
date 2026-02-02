@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors'); // 必须引入，否则前端没法访问
 const app = express();
 const port = process.env.PORT || 3000;
-const BACKEND_URL = 'https://eurati-api.zeabur.app/api/hello';
 
 app.use(cors());
 
@@ -13,4 +12,5 @@ app.get('/api/hello', (req, res) => {
 app.listen(port, "0.0.0.0", () => {
   console.log(`Server running on port ${port}`);
 });
+
 
