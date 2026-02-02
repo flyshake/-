@@ -1,0 +1,11 @@
+<script>
+    // 这里的地址是给前端浏览器看的，告诉它去哪里找后端
+    const BACKEND_URL = 'https://eurati-api.zeabur.app/api/hello';
+
+    fetch(BACKEND_URL)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('content').innerText = data.message;
+        })
+        .catch(err => console.log("连接失败:", err));
+</script>
